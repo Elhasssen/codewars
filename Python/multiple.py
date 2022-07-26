@@ -9,10 +9,9 @@
 
 # Note: If the number is a multiple of both 3 
 # and 5, only count it once.
-sum = 0
-for i in range(1,3):
-    if i % 3 == 0 or i % 5 == 0:
-        print(i)
-        sum = i + sum
-
-print(sum)
+def solution(number):
+    sum = 0
+    for i in range(1, number):
+        if i % 3 == 0 or i % 5 == 0:
+            sum += i
+    return sum

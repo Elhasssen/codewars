@@ -23,4 +23,5 @@ def solution(s):
             if len(m) % 2 == 0 :
                 list.append(m)
     return list
+    
 print(solution(s))
