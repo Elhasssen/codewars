@@ -5,46 +5,13 @@ customers = [20, 17, 38, 48, 28, 11, 44, 32, 21, 1, 31, 47, 43, 14, 33, 25, 1, 1
 
 n = 5
 
-l=[0]*n
-for i in customers:
-    l[l.index(min(l))]+=i
-print(l) 
-
-# queue = customers[:n]
- 
-# estim_time = 0
-# while sum(queue) != 0 :
-#     print(f'queue before quitting the till : {queue}')
-#     queue_non_zero = []
-#     for i in range(len(queue)):
-#         if queue[i] != 0:
-#             queue_non_zero.append(queue[i])
-#     min_ = np.min(queue_non_zero)
+def queue_time(customers, n):
+    queue = [0]*n
+    for x in customers:
+        index = queue.index(min(queue))
+        queue[index] += x
+    return max(queue)
     
-#     for i in range(len(queue)):
-#         if queue[i] != 0:
-#             queue[i] = queue[i] - min_
-#     estim_time += min_
-#     print(f'minium of queue is {min_}')
-#     print(f'queue after quitting the till : {queue}')
-#     print(f'number of zeroes : {np.count_nonzero(queue)}')
-#     if len(customers) - 1 >= n:
-#         indices = [i for i, x in enumerate(queue) if x == 0]
-#         queue[queue.index(0)] = customers[n]
-#         n += 1
-#     elif len(queue)  - np.count_nonzero(queue) == len(queue) - 1 :
-#         estim_time += max(queue)
-#         queue[queue.index(max(queue))] = 0
-#     print(f'estimated time {estim_time}')
-# # # # # # if len(set(customers)) > tills :
-# # # # # #     estim_time = sum(set(customers))
-# # # # # # elif len(set(customers)) == 0:
-# # # # # #     estim_time = 0
-# # # # # # elif len(set(customers)) <= tills :
-# # # # # #     estim_time = max(set(customers))
-
-# print(estim_time)
-
 
 
 
