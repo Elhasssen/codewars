@@ -1,6 +1,6 @@
 
 # Based on the theory of trailing zeroes 
-# 
+# https://brilliant.org/wiki/trailing-number-of-zeros/
 
 def zeros(n):
     cnt = 0
