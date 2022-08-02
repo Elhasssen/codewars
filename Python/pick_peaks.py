@@ -1,4 +1,8 @@
 
+
+arr = [1,2,3,6,4,1,2,3,2,1]
+
+
 def pick_peaks(arr):
     dictio = {
         "pos" : [],
